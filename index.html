@@ -4,30 +4,53 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Get Stuff Done</title>
+	<title>Todo MVP</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-	<div class="grid">
- 
-		   <div class="todo">
-			<p>Refactor all the code</p>
-			 <button class="button-done">Done</button>
-			 <button class="delete"></button>
-		   </div>
-
-		   <div class="todo">
-			<p>Learn Kotlin</p>
-			 <button class="button-done">Done</button>
-			 <button class="delete"></button>
-		   </div>
+<h1>Todo <span class="bold gray">MVP</span></h1>
+	<div>
+		<form class="center mt50" method="POST">
+			<label for="new-item">New item:</label>
+			<input type="text" name="new-item" required="required" pattern=".{3,}" required title="3 characters minimum"/>
+			<button type="submit">Add new item</button>
+		</form>
 		
-		  <div class="todo done">
-			<p>Put a pretty gradient on something.</p>
-			 <button class="button-done">Done</button>
-			 <button class="delete"></button>
-		   </div>
+<ul class="grid mt50">
 
-	  </div>
+		<li class="todo done">
+				<p>Put a pretty gradient on something.</p>
+				<form method="post" action="done">
+					<button class="button-done">Done</button>
+				</form>
+				 <form method="post" action="delete">
+					<button class="delete"></button>
+				 </form>
+		</li>
+
+		<li class="todo">
+				<p>Refactor all the code.</p>
+				<form method="post" action="done">
+					<button class="button-done">Done</button>
+				</form>
+				 <form method="post" action="delete">
+					<button class="delete"></button>
+				 </form>
+		</li>
+
+		<li class="todo">
+				<p>Learn Kotlin.</p>
+				<form method="post" action="done">
+					<button class="button-done">Done</button>
+				</form>
+				 <form method="post" action="delete">
+					<button class="delete"></button>
+				 </form>
+		</li>		 
+
+	</ul>
+
+
+	</div>
 </body>
 </html>
